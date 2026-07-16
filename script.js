@@ -280,3 +280,20 @@ container.style.transform =
 
 
 });
+const contactBtn = document.getElementById("contactBtn");
+const contactPopup = document.getElementById("contactPopup");
+const closePopup = document.getElementById("closePopup");
+
+contactBtn.onclick = function() {
+    contactPopup.style.display = "block";
+}
+
+closePopup.onclick = function() {
+    contactPopup.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == contactPopup) {
+        contactPopup.style.display = "none";
+    }
+}
